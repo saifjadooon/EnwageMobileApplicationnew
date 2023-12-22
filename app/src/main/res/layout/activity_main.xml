@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loader"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="ezgif-5-3b84a13b75.mp4.lottie.json"
+                app:lottie_loop="true" />
+
+
+            <fragment
+                android:id="@+id/nav_host_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="50dp"
+                app:defaultNavHost="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                app:layout_constraintVertical_bias="0.0"
+                app:navGraph="@navigation/dashboard_navigation_graph" />
+
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/coordinatorLayout"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <com.google.android.material.bottomappbar.BottomAppBar
+                    android:id="@+id/bottomAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    app:fabCradleVerticalOffset="15dp">
+
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/bottomNavigationView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="16dp"
+                        app:labelVisibilityMode="labeled"
+
+                        app:menu="@menu/bottom_nav_menu" />
+
+                </com.google.android.material.bottomappbar.BottomAppBar>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_anchor="@id/bottomAppBar"
+                    app:maxImageSize="65dp"
+                    app:srcCompat="@drawable/ic_home_icon"
+                    app:tint="@null" />
+
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_menu"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/searchView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/hamburger" />
+
+                <SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:background="@drawable/searchbg"
+                    android:padding="6dp"
+
+                    android:queryHint="Search"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_menu"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/iv_menu"
+                    app:layout_constraintTop_toTopOf="@+id/iv_menu" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="40dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_menu"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/searchView"
+                    app:layout_constraintTop_toTopOf="@+id/iv_menu"
+                    app:srcCompat="@drawable/ic_notification" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/iv_adddCLient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/add_clietns" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+    <include
+        android:id="@+id/leftDrawerMenu"
+        layout="@layout/left_drawer_menu"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:clickable="true"
+        android:elevation="2dp"
+        android:focusable="true" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

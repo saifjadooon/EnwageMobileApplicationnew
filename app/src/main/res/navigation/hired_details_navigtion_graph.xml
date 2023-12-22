@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hired_details_navigtion_graph"
+    app:startDestination="@id/jobSalaryDetails">
+
+    <fragment
+        android:id="@+id/jobSalaryDetails"
+        android:name="com.example.envagemobileapplication.Activities.HiredDetails.HiredDetailsFragments.JobSalaryDetails"
+        android:label="fragment_job_salary_details"
+        tools:layout="@layout/fragment_job_salary_details" />
+    <fragment
+        android:id="@+id/candidateSalaryDetails"
+        android:name="com.example.envagemobileapplication.Activities.HiredDetails.HiredDetailsFragments.CandidateSalaryDetails"
+        android:label="fragment_candidate_salary_details"
+        tools:layout="@layout/fragment_candidate_salary_details" />
+</navigation>

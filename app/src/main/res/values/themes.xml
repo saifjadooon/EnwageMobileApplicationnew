@@ -1,0 +1,85 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="searchViewTextField">
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="Theme.EnvageMobileApplication" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/app_main_color</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/app_main_color</item>
+        <item name="colorSecondaryVariant">@color/app_main_color</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="RoundedDialog">
+        <item name="android:background">@drawable/bottomsheetbg</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="AlertDialog.AppCompat.CircleBackground">
+        <item name="android:background">@drawable/circle_checkbox</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottomsheetbg</item>
+    </style>
+
+    <style name="Theme.EnvageMobileApplication.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.EnvageMobileApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.EnvageMobileApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="NoBottomLineTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+
+    <style name="ErrorText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/holo_red_dark</item> <!-- Red color -->
+        <item name="android:textSize">@dimen/error_text_size</item> <!-- Text size -->
+        <item name="errorIconDrawable">@drawable/transparent_drawable
+        </item> <!-- Transparent or null drawable -->
+    </style>
+
+    <drawable name="transparent_drawable">#00000000</drawable>
+
+    <style name="SpinnerTextInputLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="hintTextAppearance">@style/MyHintTextAppearance</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCornerRadiusBottomEnd">4dp</item>
+        <item name="boxCornerRadiusTopStart">4dp</item>
+        <item name="boxStrokeColor">@color/gray</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <style name="MyHintTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="CustomScrollBarStyle">
+        <item name="android:scrollbarThumbHorizontal">@android:color/transparent</item>
+    </style>
+
+
+</resources>

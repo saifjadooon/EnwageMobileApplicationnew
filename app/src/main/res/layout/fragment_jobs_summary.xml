@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/ccall"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loader"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="ezgif-5-3b84a13b75.mp4.lottie.json"
+                app:lottie_loop="true" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Description"
+                android:textColor="@color/black"
+
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/rvSkills" />
+
+            <TextView
+                android:id="@+id/textView47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+
+                android:text="Skills"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView22"
+                app:layout_constraintTop_toBottomOf="@+id/ivShowmore" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="#F0F1F3"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_profilePic"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/upload_pic_bg"
+                        app:civ_border_color="@color/light_gray1"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="@color/white"
+                        app:layout_constraintBottom_toTopOf="@+id/clientname"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_edit_client"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/ic_edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/iv_profilePic" />
+
+                    <TextView
+                        android:id="@+id/clientname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/ic_bank"
+                        android:drawablePadding="2dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxWidth="250dp"
+                        android:maxLines="1"
+                        android:text="3M Library Systems"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.497"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_profilePic" />
+
+                    <TextView
+                        android:id="@+id/tvJobName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxWidth="250dp"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:text="Product Designer"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@+id/clientname"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/clientname"
+                        app:layout_constraintTop_toBottomOf="@+id/clientname" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/visibilitystatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:maxLength="15"
+                        app:cardCornerRadius="12dp"
+                        app:layout_constraintEnd_toStartOf="@+id/onboardingStatuscv"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/iv_profilePic"
+                        app:layout_constraintTop_toBottomOf="@+id/tvIndustry">
+
+                        <TextView
+                            android:id="@+id/tvJobstatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxEms="8"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text="Open"
+                            android:textSize="11sp"
+                            app:layout_constraintEnd_toStartOf="@+id/onboardingStatuscv"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@+id/clientname"
+                            app:layout_constraintTop_toBottomOf="@+id/tvJobName" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/hybrid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:maxLength="15"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_profilePic"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/onboardingStatuscv"
+                        app:layout_constraintTop_toTopOf="@+id/visibilitystatus">
+
+                        <TextView
+                            android:id="@+id/tvjobNature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxEms="8"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:text="Hybrid"
+                            android:textColor="@color/black"
+                            android:textSize="11sp"
+                            app:layout_constraintEnd_toStartOf="@+id/onboardingStatuscv"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="@+id/clientname"
+                            app:layout_constraintTop_toBottomOf="@+id/tvJobName" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/onboardingStatuscv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:maxLength="15"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/visibilitystatus"
+                        app:layout_constraintEnd_toStartOf="@+id/hybrid"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/visibilitystatus">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tvjobtype"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:maxLength="15"
+                                android:paddingLeft="4dp"
+                                android:paddingRight="4dp"
+                                android:text="Full Time"
+                                android:textSize="11sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/payGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/ic_paygroup"
+                        android:drawablePadding="2dp"
+                        android:ellipsize="end"
+                        android:gravity="right"
+                        android:maxWidth="200dp"
+
+                        android:maxLines="1"
+                        android:text="Pay Group:"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toStartOf="@+id/tvHeadCount"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/visibilitystatus" />
+
+                    <TextView
+                        android:id="@+id/tvHeadCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:drawableLeft="@drawable/ic_owner_name"
+                        android:drawablePadding="2dp"
+                        android:ellipsize="end"
+                        android:maxEms="8"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:text="Headcount:"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/payGroup"
+                        app:layout_constraintTop_toTopOf="@+id/payGroup" />
+
+                    <TextView
+                        android:id="@+id/tvStartDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/ic_startdate"
+                        android:drawablePadding="2dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxWidth="200dp"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:text="Start Date:08/22/2022"
+                        app:layout_constraintEnd_toEndOf="@+id/clientname"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/clientname"
+                        app:layout_constraintTop_toBottomOf="@+id/payGroup" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/horizontalScrollView"
+                        style="@style/CustomScrollBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="@+id/tvTotalDays"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_profilePic"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tvTotalDays"
+                        app:layout_constraintTop_toTopOf="@+id/tvTotalDays">
+
+                        <LinearLayout
+                            android:id="@+id/linearlist"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp">
+
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:drawableLeft="@drawable/ic_building"
+
+                        android:drawablePadding="2dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:maxLength="12"
+
+                        android:maxLines="1"
+                        app:layout_constraintEnd_toStartOf="@+id/city"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/iv_profilePic"
+                        app:layout_constraintTop_toBottomOf="@+id/tvHomeAdress" />
+
+                    <TextView
+                        android:id="@+id/city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:drawableLeft="@drawable/ic_state"
+                        android:drawablePadding="2dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:maxLength="12"
+                        android:maxLines="1"
+
+                        app:layout_constraintEnd_toStartOf="@+id/postalcode"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/country"
+                        app:layout_constraintTop_toTopOf="@+id/country" />
+
+                    <TextView
+                        android:id="@+id/postalcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:drawableLeft="@drawable/ic_postalcode"
+                        android:drawablePadding="2dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:maxLength="12"
+                        android:maxLines="1"
+
+                        app:layout_constraintEnd_toStartOf="@+id/location"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/city"
+                        app:layout_constraintTop_toTopOf="@+id/country" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:drawableLeft="@drawable/ic_owner_location"
+                        android:drawablePadding="2dp"
+                        android:ellipsize="end"
+                        android:maxWidth="80dp"
+                        android:maxLength="12"
+                        android:maxLines="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_profilePic"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/postalcode"
+                        app:layout_constraintTop_toTopOf="@+id/country" />
+
+                    <ImageView
+                        android:id="@+id/facebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_facebook"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/instagram"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/clientname"
+                        app:layout_constraintTop_toTopOf="@+id/twitter" />
+
+                    <ImageView
+                        android:id="@+id/instagram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_instagram"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/twitter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/facebook"
+                        app:layout_constraintTop_toTopOf="@+id/facebook" />
+
+                    <ImageView
+                        android:id="@+id/twitter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="4dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_twitter"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/linkedin"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/instagram"
+                        app:layout_constraintTop_toBottomOf="@+id/country" />
+
+                    <ImageView
+                        android:id="@+id/linkedin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="2dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_linkedin"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/clientname"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/twitter"
+                        app:layout_constraintTop_toTopOf="@+id/twitter" />
+
+                    <TextView
+                        android:id="@+id/tvIndustry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxWidth="250dp"
+                        android:maxEms="8"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:text="Information Technology"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="@+id/tvJobName"
+                        app:layout_constraintStart_toStartOf="@+id/tvJobName"
+                        app:layout_constraintTop_toBottomOf="@+id/tvJobName" />
+
+                    <TextView
+                        android:id="@+id/tvTotalDays"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:drawableLeft="@drawable/ic_totaldayscalender"
+                        android:drawablePadding="2dp"
+                        android:text="5 Days"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toStartOf="@+id/horizontalScrollView"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/iv_profilePic"
+                        app:layout_constraintTop_toBottomOf="@+id/tvStartDate" />
+
+                    <TextView
+                        android:id="@+id/tvHomeAdress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:drawableLeft="@drawable/ic_owner_home"
+                        android:drawablePadding="2dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxWidth="250dp"
+                        android:maxEms="18"
+                        android:maxLines="1"
+                        android:text="881 Cfastro St. View, CA 95041"
+                        android:textSize="13sp"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_profilePic"
+                        app:layout_constraintStart_toStartOf="@+id/iv_profilePic"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTotalDays" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Billing Information"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBillingInformation"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+
+            <org.sufficientlysecure.htmltextview.HtmlTextView
+                android:id="@+id/tv_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center|left"
+                android:text=""
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="@+id/textView23"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/searchbg"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description" />
+
+            <TextView
+                android:id="@+id/tv_nodescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="No description to show"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/rvBillingInformation"
+                app:layout_constraintStart_toStartOf="@+id/textView23"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSkills"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/rvBillingInformation"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView47"
+                app:layout_constraintTop_toBottomOf="@+id/textView47" />
+
+            <ImageView
+                android:id="@+id/ivShowmore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="@+id/rvBillingInformation"
+                app:layout_constraintStart_toStartOf="@+id/rvBillingInformation"
+                app:layout_constraintTop_toBottomOf="@+id/rvBillingInformation"
+                app:srcCompat="@drawable/ic_showmore" />
+
+            <TextView
+                android:id="@+id/tvNoskills"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:gravity="center"
+                android:text="No Skills to Show"
+                app:layout_constraintBottom_toBottomOf="@+id/rvSkills"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView47"
+                app:layout_constraintTop_toBottomOf="@+id/ivShowmore" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

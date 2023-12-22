@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout12"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/white_pill_with_gray_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Markup Percentage Details"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Markup Percentage Details:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView36"
+                    app:layout_constraintEnd_toStartOf="@+id/tvMarkupPercentage"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                <TextView
+                    android:id="@+id/tvMarkupPercentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView18"
+                    app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Min. Pay Rate:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView42"
+                    app:layout_constraintEnd_toStartOf="@+id/tvMinPayRate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                <TextView
+                    android:id="@+id/tvMinPayRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView36"
+                    app:layout_constraintTop_toTopOf="@+id/textView36" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Min. Bill Rate:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView44"
+                    app:layout_constraintEnd_toStartOf="@+id/tvMinBillRate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+                <TextView
+                    android:id="@+id/tvMinBillRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView42"
+                    app:layout_constraintTop_toTopOf="@+id/textView42" />
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Max. Pay Rate:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView46"
+                    app:layout_constraintEnd_toStartOf="@+id/tvMaxPayRate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+                <TextView
+                    android:id="@+id/tvMaxPayRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView44"
+                    app:layout_constraintTop_toTopOf="@+id/textView44" />
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Max. Bill Rate:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView48"
+                    app:layout_constraintEnd_toStartOf="@+id/tvMaxBillRate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+                <TextView
+                    android:id="@+id/tvMaxBillRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView46"
+                    app:layout_constraintTop_toTopOf="@+id/textView46" />
+
+                <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Target. Pay Rate:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView49"
+                    app:layout_constraintEnd_toStartOf="@+id/tvTargetPayRate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView46" />
+
+                <TextView
+                    android:id="@+id/textView49"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Target. Bill Rate:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView50"
+                    app:layout_constraintEnd_toStartOf="@+id/tvTargetBillRate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+                <TextView
+                    android:id="@+id/textView50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Frequency:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvFrequecny"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView49" />
+
+                <TextView
+                    android:id="@+id/tvTargetPayRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView48"
+                    app:layout_constraintTop_toTopOf="@+id/textView48" />
+
+                <TextView
+                    android:id="@+id/tvTargetBillRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView49"
+                    app:layout_constraintTop_toTopOf="@+id/textView49" />
+
+                <TextView
+                    android:id="@+id/tvFrequecny"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView50"
+                    app:layout_constraintTop_toTopOf="@+id/textView50" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout13"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/white_pill_with_gray_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout12">
+
+                <TextView
+                    android:id="@+id/textView17dsd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="OT and DT"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView1238"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="OT Rule:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textVizsew36"
+                    app:layout_constraintEnd_toStartOf="@+id/tvOTRule"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView17dsd" />
+
+                <TextView
+                    android:id="@+id/tvOTRule"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView1238"
+                    app:layout_constraintTop_toTopOf="@+id/textView1238" />
+
+                <TextView
+                    android:id="@+id/textVizsew36"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Min. Pay Rate:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textVillew42"
+                    app:layout_constraintEnd_toStartOf="@+id/tvOTDTMinpayRate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView1238" />
+
+                <TextView
+                    android:id="@+id/tvOTDTMinpayRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textVizsew36"
+                    app:layout_constraintTop_toTopOf="@+id/textVizsew36" />
+
+                <TextView
+                    android:id="@+id/textVillew42"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="OT Multiplier:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViessw44"
+                    app:layout_constraintEnd_toStartOf="@+id/tvOtMultiplier"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textVizsew36" />
+
+                <TextView
+                    android:id="@+id/tvOtMultiplier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textVillew42"
+                    app:layout_constraintTop_toTopOf="@+id/textVillew42" />
+
+                <TextView
+                    android:id="@+id/textViessw44"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="OT. Pay Rate:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textVddiew46"
+                    app:layout_constraintEnd_toStartOf="@+id/tvOtPayRate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textVillew42" />
+
+                <TextView
+                    android:id="@+id/tvOtPayRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textViessw44"
+                    app:layout_constraintTop_toTopOf="@+id/textViessw44" />
+
+                <TextView
+                    android:id="@+id/textVddiew46"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="OT. Bill Rate:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textVediew48"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDTBillRate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViessw44" />
+
+                <TextView
+                    android:id="@+id/tvoTBillRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textVddiew46"
+                    app:layout_constraintTop_toTopOf="@+id/textVddiew46" />
+
+                <TextView
+                    android:id="@+id/textVediew48"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="DT Multiplier:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViddew49"
+                    app:layout_constraintEnd_toStartOf="@+id/tvOtMultiplier"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textVddiew46" />
+
+                <TextView
+                    android:id="@+id/textViddew49"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="DT. Pay Rate:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textVddiew50"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDtPayRate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textVediew48" />
+
+                <TextView
+                    android:id="@+id/textVddiew50"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="DT. Bill Rate:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvDTBillRate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViddew49" />
+
+                <TextView
+                    android:id="@+id/tvDtMultiplier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textVediew48"
+                    app:layout_constraintTop_toTopOf="@+id/textVediew48" />
+
+                <TextView
+                    android:id="@+id/tvDtPayRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textViddew49"
+                    app:layout_constraintTop_toTopOf="@+id/textViddew49" />
+
+                <TextView
+                    android:id="@+id/tvDTBillRate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textVddiew50"
+                    app:layout_constraintTop_toTopOf="@+id/textVddiew50" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/white_pill_with_gray_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout13"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout13"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout13">
+
+                <TextView
+                    android:id="@+id/tvJoiningdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView56"
+                    app:layout_constraintTop_toTopOf="@+id/textView56" />
+
+                <TextView
+                    android:id="@+id/textView56"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Joining Date:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView58"
+                    app:layout_constraintEnd_toStartOf="@+id/tvJoiningdate"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView58"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Offered Salary:"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvOfferedSalary"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView56" />
+
+                <TextView
+                    android:id="@+id/tvOfferedSalary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView58"
+                    app:layout_constraintTop_toTopOf="@+id/textView58" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
