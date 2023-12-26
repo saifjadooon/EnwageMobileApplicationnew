@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TImarkupPercentage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMarkupPErcentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIminPayrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/TIminBillrate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                app:layout_constraintTop_toBottomOf="@+id/TImarkupPercentage">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPayrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIminBillrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:enabled="false"
+                android:hint="Min. Bill Rate"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/TImarkupPercentage"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/TIminPayrate"
+                app:layout_constraintTop_toTopOf="@+id/TIminPayrate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMinBillRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="number"
+                    android:maxLength="200" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TImaxPayrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/TImaxBillrate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/TIminPayrate"
+                app:layout_constraintTop_toBottomOf="@+id/TIminPayrate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMaxPayrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TImaxBillrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:enabled="false"
+                android:hint="Max. Bill Rate"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/TIminBillrate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/TImaxPayrate"
+                app:layout_constraintTop_toTopOf="@+id/TImaxPayrate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMaxBillRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="number"
+                    android:maxLength="200" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TItargetPayrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/TItargetBillrate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/TImaxPayrate"
+                app:layout_constraintTop_toBottomOf="@+id/TImaxPayrate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTargetPayrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TItargetBillrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:enabled="false"
+                android:hint="Target Bill Rate"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/TImaxBillrate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/TItargetPayrate"
+                app:layout_constraintTop_toTopOf="@+id/TItargetPayrate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTargetBillRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="number"
+                    android:maxLength="200" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Markup Percentage Details"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Overtime Details"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/TItargetPayrate" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupOvertime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/TImarkupPercentage"
+                app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+                <RadioButton
+                    android:id="@+id/rbPaidandBilledOvertime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:checked="true"
+                    android:text="Paid and Billed"
+                    app:layout_constraintStart_toStartOf="@+id/textView15"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+                <RadioButton
+                    android:id="@+id/rbPaidNotBilledOvertime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paid not Billed"
+                    app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                    app:layout_constraintTop_toBottomOf="@+id/rbPaidandBilledOvertime" />
+
+                <RadioButton
+                    android:id="@+id/rbNoneOvertime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="None"
+                    app:layout_constraintStart_toStartOf="@+id/textView15"
+                    app:layout_constraintTop_toBottomOf="@+id/rbPaidNotBilledOvertime" />
+
+
+            </RadioGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout10"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/searchbg"
+                app:layout_constraintEnd_toEndOf="@+id/TImarkupPercentage"
+                app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupOvertime">
+
+                <ImageView
+                    android:id="@+id/ivMinusOvertime"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_minus" />
+
+                <ImageView
+                    android:id="@+id/ivPlusOvertime"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_pluss" />
+
+                <TextView
+                    android:id="@+id/tvHeadCountOvertime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1.5"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivPlusOvertime"
+                    app:layout_constraintStart_toEndOf="@+id/ivMinusOvertime"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIovertimeMarkupPercentage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:enabled="false"
+                android:hint="Overtime Markup Percentage"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/TImarkupPercentage"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etOvertimeMarkupPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="numberDecimal"
+                    android:maxLength="200" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIOvertimePayrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:enabled="false"
+                android:hint="Overtime Pay Rate"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/TIovertimeBillrate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                app:layout_constraintTop_toBottomOf="@+id/TIovertimeMarkupPercentage">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etovertimePayrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="number"
+                    android:maxLength="200" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIovertimeBillrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:enabled="false"
+                android:hint="Overtime Bill Rate "
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/TImarkupPercentage"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/TIOvertimePayrate"
+                app:layout_constraintTop_toTopOf="@+id/TIOvertimePayrate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etovertimeBillRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="number"
+                    android:maxLength="200" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textViewdsd16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Double-time Details"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/TIOvertimePayrate" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupDoubletime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/TImarkupPercentage"
+                app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                app:layout_constraintTop_toBottomOf="@+id/textViewdsd16">
+
+                <RadioButton
+                    android:id="@+id/rbPaidandBilledDoubletime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:checked="true"
+                    android:text="Paid and Billed"
+                    app:layout_constraintStart_toStartOf="@+id/textView15"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewdsd16" />
+
+                <RadioButton
+                    android:id="@+id/rbPaidNotBilledDoubletime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paid not Billed"
+                    app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                    app:layout_constraintTop_toBottomOf="@+id/rbPaidandBilledDoubletime" />
+
+                <RadioButton
+                    android:id="@+id/rbNonerbDoubletime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="None"
+                    app:layout_constraintStart_toStartOf="@+id/textView15"
+                    app:layout_constraintTop_toBottomOf="@+id/rbPaidNotBilledDoubletime" />
+
+            </RadioGroup>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ccDoubletimeMultiplier"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/searchbg"
+                app:layout_constraintEnd_toEndOf="@+id/TImarkupPercentage"
+                app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupDoubletime">
+
+                <ImageView
+                    android:id="@+id/ivMinusdbltime"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_minus" />
+
+                <ImageView
+                    android:id="@+id/iv_plusdbltime"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_pluss" />
+
+                <TextView
+                    android:id="@+id/tvHeadCountdbltime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="2.0"
+                    android:textSize="18dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/iv_plusdbltime"
+                    app:layout_constraintStart_toEndOf="@+id/ivMinusdbltime"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIdoubletimeMarkupPercentage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:enabled="false"
+                android:hint="Doubletime Markup Percentage"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/TImarkupPercentage"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                app:layout_constraintTop_toBottomOf="@+id/ccDoubletimeMultiplier">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDoubletimeMarkupPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="number"
+                    android:maxLength="200" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIDoubletimePayrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:enabled="false"
+                android:hint="Double-time Pay Rate"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/TIdoubletimeBillrate"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                app:layout_constraintTop_toBottomOf="@+id/TIdoubletimeMarkupPercentage">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etdoubletimePayrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="number"
+                    android:maxLength="200" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIdoubletimeBillrate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:enabled="false"
+                android:hint="Double-time Bill Rate "
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/TImarkupPercentage"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/TIDoubletimePayrate"
+                app:layout_constraintTop_toTopOf="@+id/TIDoubletimePayrate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etdoubletimeBillRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/white"
+                    android:inputType="number"
+                    android:maxLength="200" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIFrequency"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="200dp"
+                android:minHeight="60dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/TImarkupPercentage"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/TImarkupPercentage"
+                app:layout_constraintTop_toBottomOf="@+id/TIDoubletimePayrate">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinnerFrequency"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:drawableRight="@drawable/ic_spinnerdropdown"
+                    android:drawablePadding="12dp"
+                    android:inputType="none"
+                    android:minHeight="60dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnback"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/searchbg"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnnext"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnnext"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/btn_black_radius"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnback"
+        app:layout_constraintTop_toTopOf="@+id/btnback" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

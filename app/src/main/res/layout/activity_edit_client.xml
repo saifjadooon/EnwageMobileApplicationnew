@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loader"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="ezgif-5-3b84a13b75.mp4.lottie.json"
+        app:lottie_loop="true" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout6"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Profile Summary"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_cross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView9"
+            app:srcCompat="@drawable/ic_iv_cross" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/cc_specifiations"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/iv_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSpecifications">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="-55dp"
+            tools:layout_editor_absoluteY="-138dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/client_legal_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cc_clinetlegalname"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_legalName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="100" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:id="@+id/cc_clinetlegalname"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/client_legal_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/client_legal_name">
+
+                    <ImageView
+                        android:id="@+id/iv_tic_legal_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/iv_cross_legal_name"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_tic" />
+
+                    <ImageView
+                        android:id="@+id/iv_cross_legal_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_tic_legal_name"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iv_cross" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:id="@+id/cc_visibilityicon"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout">
+
+                    <ImageView
+                        android:id="@+id/iv_tic_visibility_statuss"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/iv_cross_visibility_statuss"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_tic" />
+
+                    <ImageView
+                        android:id="@+id/iv_cross_visibility_statuss"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_tic_visibility_statuss"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iv_cross" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:id="@+id/cc_onboardingstatus"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout2">
+
+                    <ImageView
+                        android:id="@+id/iv_tic_onboarding_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_tic" />
+
+                    <ImageView
+                        android:id="@+id/iv_cross_onboarding_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_tic_onboarding_status"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iv_cross" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+
+                    android:id="@+id/cc_clientindustry"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout3">
+
+                    <ImageView
+                        android:id="@+id/iv_tic_client_department"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_tic" />
+
+                    <ImageView
+                        android:id="@+id/iv_cross_client_department"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_tic_client_department"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iv_cross" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+
+                    android:id="@+id/cc_ownername"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout4">
+
+                    <ImageView
+                        android:id="@+id/iv_tic_owner_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_tic" />
+
+                    <ImageView
+                        android:id="@+id/iv_cross_owner_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_tic_owner_name"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iv_cross" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+
+                    android:id="@+id/cc_phonenumber"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout5">
+
+                    <ImageView
+                        android:id="@+id/iv_tic_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_tic" />
+
+                    <ImageView
+                        android:id="@+id/iv_cross_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_tic_phone"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iv_cross" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+
+                    android:id="@+id/cc_adress"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout6">
+
+                    <ImageView
+                        android:id="@+id/iv_tic_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_tic" />
+
+                    <ImageView
+                        android:id="@+id/iv_cross_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_tic_address"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iv_cross" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+
+                    android:id="@+id/cc_country"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout7">
+
+                    <ImageView
+                        android:id="@+id/iv_tic_country"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_tic" />
+
+                    <ImageView
+                        android:id="@+id/iv_cross_country"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_tic_country"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iv_cross" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+
+                    android:id="@+id/cc_zipcode"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout8">
+
+                    <ImageView
+                        android:id="@+id/iv_tic_zipcode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_tic" />
+
+                    <ImageView
+                        android:id="@+id/iv_cross_zipcode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_tic_zipcode"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iv_cross" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+
+                    android:id="@+id/cc_location"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout10">
+
+                    <ImageView
+                        android:id="@+id/iv_tic_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_tic" />
+
+                    <ImageView
+                        android:id="@+id/iv_cross_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_tic_location"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iv_cross" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:id="@+id/cc_website"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/textInputLayout11"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textInputLayout11">
+
+                    <ImageView
+                        android:id="@+id/iv_tic_website"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_tic" />
+
+                    <ImageView
+                        android:id="@+id/iv_cross_website"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_tic_website"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_iv_cross" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:hint="Default Visibility Icon"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cc_visibilityicon"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/client_legal_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/et_visibility"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="100"
+                        android:minHeight="60dp"
+                        android:padding="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+
+                    android:hint="Onboarding Status"
+                    android:minHeight="60dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cc_onboardingstatus"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spiner_onboardingStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/white"
+                        android:drawableRight="@drawable/spinner_dropdown"
+                        android:drawablePadding="12dp"
+                        android:inputType="none"
+                        android:minHeight="60dp"
+                        android:padding="4dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:hint="Clients Industry"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cc_clientindustry"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/et_industry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="200"
+                        android:minHeight="60dp"
+                        android:padding="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:hint="Owner Name"
+                    android:minHeight="60dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cc_ownername"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_owner_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/white"
+                        android:drawableRight="@drawable/spinner_dropdown"
+                        android:drawablePadding="12dp"
+                        android:inputType="none"
+                        android:minHeight="60dp"
+                        android:padding="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:hint="Phone Number"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cc_phonenumber"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/et_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:inputType="number"
+                        android:maxLength="12"
+                        android:minHeight="60dp"
+                        android:padding="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cc_adress"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/et_adress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="100"
+                        android:minHeight="60dp"
+                        android:padding="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:hint="Country"
+                    android:minHeight="60dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cc_country"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/white"
+                        android:drawableRight="@drawable/spinner_dropdown"
+                        android:drawablePadding="12dp"
+                        android:inputType="none"
+                        android:minHeight="60dp"
+                        android:padding="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:minHeight="60dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cc_zipcode"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/et_zipcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/white"
+                        android:drawablePadding="12dp"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:minHeight="60dp"
+                        android:padding="4dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textInputLayout12"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/et_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:hint="City"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="100"
+                        android:minHeight="60dp"
+                        android:padding="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textInputLayout9"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout8">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:hint="State"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="100"
+                        android:minHeight="60dp"
+                        android:padding="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cc_location"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout9">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/et_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:hint="Location"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="100"
+                        android:minHeight="60dp"
+                        android:padding="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:id="@+id/textInputLayout11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="12dp"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/cc_website"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout10">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/et_website"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:backgroundTint="@color/white"
+                        android:hint="Website"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="200"
+                        android:minHeight="60dp"
+                        android:padding="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:id="@+id/socialmediafield"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/white_pill_with_gray_bg"
+                    android:minHeight="60dp"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout11"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout11">
+
+                    <TextView
+                        android:id="@+id/et_social_media"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:backgroundTint="@color/white"
+                        android:maxLength="100"
+                        android:text="Social Media"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/spinner_dropdown" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/iv_cancel"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_white_radius"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_add_client"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add_client"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/btn_black_radius"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_cancel"
+        app:layout_constraintTop_toTopOf="@+id/iv_cancel" />
+
+    <TextView
+        android:id="@+id/tvSpecifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="Specifications"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout6" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:padding="8dp"
+        android:text="Description"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/tvSpecifications"
+        app:layout_constraintTop_toTopOf="@+id/tvSpecifications" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/descriptionbg"
+        android:padding="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/cc_descriptionticcross"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription">
+
+        <jp.wasabeef.richeditor.RichEditor
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:minHeight="80dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/black"
+                android:fadeScrollbars="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/action_undo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+
+                        android:padding="12dp"
+                        android:src="@drawable/undo" />
+
+                    <ImageView
+                        android:id="@+id/action_redo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/redo" />
+
+                    <ImageView
+                        android:id="@+id/action_bold"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/bold" />
+
+                    <ImageView
+                        android:id="@+id/action_italic"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:background="@color/white"
+
+                        android:padding="12dp"
+                        android:src="@drawable/italic" />
+
+                    <ImageView
+                        android:id="@+id/action_underline"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/underline" />
+
+                    <ImageView
+                        android:id="@+id/action_strikethrough"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/strile" />
+
+                    <ImageView
+                        android:id="@+id/action_insert_bullets"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/bullets" />
+
+                    <ImageView
+                        android:id="@+id/action_insert_numbers"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/bulletnumbers" />
+
+                    <ImageView
+                        android:id="@+id/action_insert_link"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_profile_attachments"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/action_txt_color"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/textcoor"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/action_bg_color"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/bgcolor"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/action_align_left"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/leftallign" />
+
+                    <ImageView
+                        android:id="@+id/action_align_center"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/allignright" />
+
+                    <ImageView
+                        android:id="@+id/action_align_right"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+
+                        android:background="@color/white"
+                        android:padding="12dp"
+                        android:src="@drawable/centerallign" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--   <org.sufficientlysecure.htmltextview.HtmlTextView
+               android:id="@+id/tv_description_text"
+               android:layout_width="0dp"
+               android:layout_height="0dp"
+               android:background="@color/white"
+                android:textColor="@color/black"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+   -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc_descriptionticcross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/cc_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cc_description">
+
+        <ImageView
+            android:id="@+id/iv_ticdescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/iv_crossdescription"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_tic" />
+
+        <ImageView
+            android:id="@+id/iv_crossdescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_ticdescription"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_iv_cross" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/send_offer_letter_navgraph"
+    app:startDestination="@id/offerLetterF">
+
+    <fragment
+        android:id="@+id/offerLetterF"
+        android:name="com.example.envagemobileapplication.Activities.Jobs.JobSummary.SendOfferLetter.SendOfferLetterFragments.OfferLetterF"
+        android:label="fragment_offer_letter"
+        tools:layout="@layout/fragment_offer_letter" />
+    <fragment
+        android:id="@+id/sendEmailF"
+        android:name="com.example.envagemobileapplication.Activities.Jobs.JobSummary.SendOfferLetter.SendOfferLetterFragments.SendEmailF"
+        android:label="fragment_send_email"
+        tools:layout="@layout/fragment_send_email" />
+</navigation>

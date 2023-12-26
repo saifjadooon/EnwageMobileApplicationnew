@@ -1,0 +1,102 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.example.envagemobileapplication"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [appAuthRedirectScheme: 'com.redirectScheme.comm']
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    viewBinding {
+        enabled = true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    configurations.all {
+        resolutionStrategy.force "com.android.support:support-v4:26.1.0"
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.3.0'
+
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.9.9'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+// downgrade to 1.3.1 version to run on api level 32
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    def lifecycle_version = "2.4.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.4.1"))
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:okhttp-urlconnection")
+    //oAuth
+    implementation 'com.nimbusds:oauth2-oidc-sdk:9.8'
+    implementation 'net.openid:appauth:0.11.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.google.android.material:material:1.3.0-alpha02'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+
+    //coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.airbnb.android:lottie:3.7.0'
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.caverock:androidsvg:1.4'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    // implementation 'org.sufficientlysecure:html-textview:4.1'
+    implementation 'org.sufficientlysecure:html-textview:4.0'
+    implementation 'jp.wasabeef:richeditor-android:2.0.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'jp.wasabeef:blurry:4.0.0'
+    implementation "com.github.sakacyber:html-textview:1.0.15"
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC1'
+
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+
+
+}

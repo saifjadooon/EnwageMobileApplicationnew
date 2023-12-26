@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/candidate_profile_summary_navigtion_graph"
+    app:startDestination="@id/candidateSummaryF">
+
+    <fragment
+        android:id="@+id/candidateSummaryF"
+        android:name="com.example.envagemobileapplication.Activities.Candidates.CandidateFragments.CandidateSummaryF"
+        android:label="fragment_candidate_summary"
+        tools:layout="@layout/fragment_candidate_summary" >
+        <action
+            android:id="@+id/action_candidateSummaryF_to_resumeF"
+            app:destination="@id/resumeF" />
+    </fragment>
+    <fragment
+        android:id="@+id/resumeF"
+        android:name="com.example.envagemobileapplication.Activities.Candidates.CandidateFragments.ResumeF"
+        android:label="fragment_resume"
+        tools:layout="@layout/fragment_resume" />
+</navigation>

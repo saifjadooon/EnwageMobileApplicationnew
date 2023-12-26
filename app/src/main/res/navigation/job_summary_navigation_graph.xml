@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/job_summary_navigation_graph"
+    app:startDestination="@id/jobsSummaryFragment">
+
+    <fragment
+        android:id="@+id/jobsSummaryFragment"
+        android:name="com.example.envagemobileapplication.Activities.Jobs.JobSummary.JobSummaryFragments.JobsSummaryFragment"
+        android:label="fragment_jobs_summary"
+        tools:layout="@layout/fragment_jobs_summary" />
+    <fragment
+        android:id="@+id/jobsSummaryCandidatesF"
+        android:name="com.example.envagemobileapplication.Activities.Jobs.JobSummary.JobSummaryFragments.JobsSummaryCandidatesF"
+        android:label="fragment_jobs_summary_candidates"
+        tools:layout="@layout/fragment_jobs_summary_candidates" />
+    <fragment
+        android:id="@+id/jobsSummaryAttachmentsF"
+        android:name="com.example.envagemobileapplication.Activities.Jobs.JobSummary.JobSummaryFragments.JobsSummaryAttachmentsF"
+        android:label="fragment_jobs_summary_attachments"
+        tools:layout="@layout/fragment_jobs_summary_attachments" />
+    <fragment
+        android:id="@+id/jobsSummaryTasksF"
+        android:name="com.example.envagemobileapplication.Activities.Jobs.JobSummary.JobSummaryFragments.JobsSummaryTasksF"
+        android:label="fragment_jobs_summary_tasks"
+        tools:layout="@layout/fragment_jobs_summary_tasks" />
+    <fragment
+        android:id="@+id/jobsSummaryNotesF"
+        android:name="com.example.envagemobileapplication.Activities.Jobs.JobSummary.JobSummaryFragments.JobsSummaryNotesF"
+        android:label="fragment_jobs_summary_notes"
+        tools:layout="@layout/fragment_jobs_summary_notes" />
+</navigation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/client_summary_navigation_graph"
+    app:startDestination="@id/clientSummaryF">
+
+    <fragment
+        android:id="@+id/clientSummaryF"
+        android:name="com.example.envagemobileapplication.Fragments.ClientSummary.ClientSummaryF"
+        android:label="fragment_client_summary"
+        tools:layout="@layout/fragment_client_summary" />
+    <fragment
+        android:id="@+id/clientSummaryJobsF"
+        android:name="com.example.envagemobileapplication.Fragments.ClientSummary.ClientSummaryJobsF"
+        android:label="fragment_client_summary_jobs"
+        tools:layout="@layout/fragment_client_summary_jobs" />
+    <fragment
+        android:id="@+id/clientSummaryContactsFragment"
+        android:name="com.example.envagemobileapplication.Fragments.ClientSummary.ClientSummaryContactsFragment"
+        android:label="fragment_client_summary_contacts"
+        tools:layout="@layout/fragment_client_summary_contacts" />
+</navigation>

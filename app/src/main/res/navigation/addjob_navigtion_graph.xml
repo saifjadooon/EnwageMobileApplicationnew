@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addjob_navigtion_graph"
+    app:startDestination="@id/addjobBasicDetailF">
+
+    <fragment
+        android:id="@+id/addjobBasicDetailF"
+        android:name="com.example.envagemobileapplication.Activities.Jobs.AddJobFragments.AddjobBasicDetailF"
+        android:label="fragment_addjob_basic_detail"
+        tools:layout="@layout/fragment_addjob_basic_detail" />
+    <fragment
+        android:id="@+id/addjobJobDetailF"
+        android:name="com.example.envagemobileapplication.Activities.Jobs.AddJobFragments.AddjobJobDetailF"
+        android:label="fragment_addjob_job_detail"
+        tools:layout="@layout/fragment_addjob_job_detail" />
+    <fragment
+        android:id="@+id/addjobAdressDetailF"
+        android:name="com.example.envagemobileapplication.Activities.Jobs.AddJobFragments.AddjobAdressDetailF"
+        android:label="fragment_addjob_adress_detail"
+        tools:layout="@layout/fragment_addjob_adress_detail" />
+    <fragment
+        android:id="@+id/addjobSalaryDetailF"
+        android:name="com.example.envagemobileapplication.Activities.Jobs.AddJobFragments.AddjobSalaryDetailF"
+        android:label="fragment_addjob_salary_detail"
+        tools:layout="@layout/fragment_addjob_salary_detail" />
+</navigation>

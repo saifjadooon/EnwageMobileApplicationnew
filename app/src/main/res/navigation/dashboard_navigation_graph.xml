@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_navigation_graph"
+    app:startDestination="@id/homeF">
+
+    <fragment
+        android:id="@+id/candidateF"
+        android:name="com.example.envagemobileapplication.Fragments.Dashboard.CandidateF"
+        android:label="fragment_candidate"
+        tools:layout="@layout/fragment_candidate">
+        <action
+            android:id="@+id/action_candidateF_to_clientsF"
+            app:destination="@id/clientsF" />
+    </fragment>
+    <fragment
+        android:id="@+id/clientsF"
+        android:name="com.example.envagemobileapplication.Fragments.Dashboard.ClientsF"
+        android:label="fragment_clients"
+        tools:layout="@layout/fragment_clients">
+        <action
+            android:id="@+id/action_clientsF_to_homeF"
+            app:destination="@id/homeF" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeF"
+        android:name="com.example.envagemobileapplication.Fragments.Dashboard.HomeF"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeF_to_jobsF"
+            app:destination="@id/jobsF" />
+    </fragment>
+    <fragment
+        android:id="@+id/jobsF"
+        android:name="com.example.envagemobileapplication.Fragments.Dashboard.JobsF"
+        android:label="fragment_jobs"
+        tools:layout="@layout/fragment_jobs">
+        <action
+            android:id="@+id/action_jobsF_to_messagesF"
+            app:destination="@id/messagesF" />
+    </fragment>
+    <fragment
+        android:id="@+id/messagesF"
+        android:name="com.example.envagemobileapplication.Fragments.Dashboard.MessagesF"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" />
+
+</navigation>

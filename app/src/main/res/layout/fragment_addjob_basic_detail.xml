@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <CheckBox
+        android:id="@+id/cbUseTemplate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Use Template"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TISelectTemplate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:hint="Select Template"
+        android:minHeight="60dp"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/cbUseTemplate"
+        app:layout_constraintTop_toBottomOf="@+id/cbUseTemplate">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinnerSelectTemplate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:drawableRight="@drawable/ic_spinnerdropdown"
+
+            android:drawablePadding="12dp"
+            android:inputType="none"
+            android:minHeight="60dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIposition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/TISelectTemplate"
+        app:layout_constraintStart_toStartOf="@+id/cbUseTemplate"
+        app:layout_constraintTop_toBottomOf="@+id/TISelectTemplate">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPosition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/white"
+            android:inputType="text"
+            android:maxLength="20" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Ticlient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Client Name"
+        android:minHeight="60dp"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/TISelectTemplate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/cbUseTemplate"
+        app:layout_constraintTop_toBottomOf="@+id/TIposition">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinnerClient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:drawableRight="@drawable/ic_spinnerdropdown"
+            android:drawablePadding="12dp"
+            android:inputType="none"
+            android:minHeight="60dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIpaygroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Pay Group"
+        android:minHeight="60dp"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/TISelectTemplate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/cbUseTemplate"
+        app:layout_constraintTop_toBottomOf="@+id/Ticlient">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinnerPaygroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:drawableRight="@drawable/ic_spinnerdropdown"
+            android:drawablePadding="12dp"
+            android:inputType="none"
+            android:minHeight="60dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIindustry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Industry"
+        android:minHeight="60dp"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/TISelectTemplate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/cbUseTemplate"
+        app:layout_constraintTop_toBottomOf="@+id/TIpaygroup">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinnerIndustry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:drawableRight="@drawable/ic_spinnerdropdown"
+            android:drawablePadding="12dp"
+            android:inputType="none"
+            android:paddingRight="15dp"
+            android:minHeight="60dp"
+            android:paddingLeft="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIjobNature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Job Nature"
+        android:minHeight="60dp"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/TISelectTemplate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/cbUseTemplate"
+        app:layout_constraintTop_toBottomOf="@+id/TIindustry">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinnerJobNature"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:drawableRight="@drawable/ic_spinnerdropdown"
+            android:drawablePadding="12dp"
+            android:inputType="none"
+            android:minHeight="60dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/btn_black_radius"
+        android:text="Next"
+
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

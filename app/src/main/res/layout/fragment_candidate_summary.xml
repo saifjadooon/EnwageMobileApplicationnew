@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Candidates.CandidateFragments.CandidateSummaryF">
+
+
+    <ScrollView
+        android:id="@+id/cpsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/headerCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="#F0F1F3"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/view4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_candidateProfile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="16dp"
+                        android:rotation="360"
+                        android:src="@drawable/upload_pic_bg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/iv_camera"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/camera_icon"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_candidateProfile"
+                        app:layout_constraintEnd_toEndOf="@+id/iv_candidateProfile" />
+
+                    <TextView
+                        android:id="@+id/candidateName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxWidth="170dp"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/candidateSSN"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_candidateProfile" />
+
+                    <TextView
+                        android:id="@+id/candidateSSN"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:text=""
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/candidateName"
+                        app:layout_constraintStart_toStartOf="@+id/candidateName"
+                        app:layout_constraintTop_toBottomOf="@+id/candidateName" />
+
+
+                    <TextView
+                        android:id="@+id/cEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="15dp"
+                        android:drawableLeft="@drawable/ic_email"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:maxWidth="180dp"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@+id/cPhone"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/candidateSSN" />
+
+                    <TextView
+                        android:id="@+id/cPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_owner_contact"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:maxEms="8"
+                        android:maxLength="20"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/cEmail"
+                        app:layout_constraintTop_toTopOf="@+id/cEmail" />
+
+                    <TextView
+                        android:id="@+id/cAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:drawableLeft="@drawable/ic_owner_home"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxWidth="260dp"
+                        android:maxLength="35"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/iv_fb"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cEmail" />
+
+                    <ImageView
+                        android:id="@+id/iv_fb"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="16dp"
+                        android:src="@drawable/ic_facebook"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_instagram"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cAddress" />
+
+                    <ImageView
+                        android:id="@+id/iv_instagram"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_instagram"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_twitter"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/iv_fb"
+                        app:layout_constraintTop_toTopOf="@+id/iv_fb" />
+
+                    <ImageView
+                        android:id="@+id/iv_twitter"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/ic_twitter"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/iv_linkedIn"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/iv_instagram"
+                        app:layout_constraintTop_toTopOf="@+id/iv_fb" />
+
+                    <ImageView
+                        android:id="@+id/iv_linkedIn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_linkedin"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/iv_twitter"
+                        app:layout_constraintTop_toTopOf="@+id/iv_fb" />
+
+                    <ImageView
+                        android:id="@+id/btn_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_edit"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvJobs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:text="Jobs"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headerCardView" />
+
+            <TextView
+                android:id="@+id/tvEducation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
+                android:text="Education"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/rvEducationCandidatetHS"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvJobsCandidatetHS" />
+
+            <ImageView
+                android:id="@+id/btnAddEducation"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/plus_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/tvEducation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvEducation" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvJobsCandidatetHS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_max="235dp"
+                app:layout_constraintHeight_min="30dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvJobs" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/CARD_BG"
+                app:layout_constraintBottom_toTopOf="@+id/tvJobs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/headerCardView" />
+
+            <ImageView
+                android:id="@+id/btnAddJob"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/plus_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/tvJobs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvJobs" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEducationCandidatetHS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintHeight_max="160dp"
+                app:layout_constraintHeight_min="30dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEducation" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/CARD_BG"
+                app:layout_constraintBottom_toTopOf="@+id/tvEducation"
+                app:layout_constraintEnd_toEndOf="@+id/rvEducationCandidatetHS"
+                app:layout_constraintTop_toBottomOf="@+id/rvJobsCandidatetHS" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/CARD_BG"
+                app:layout_constraintBottom_toTopOf="@+id/tvExperience"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvEducationCandidatetHS" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/CARD_BG"
+                app:layout_constraintBottom_toTopOf="@+id/tvSkills"
+                app:layout_constraintTop_toBottomOf="@+id/rvExperienceCandidatetHS"
+                tools:layout_editor_absoluteX="-63dp" />
+
+            <TextView
+                android:id="@+id/tvExperience"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:text="Experience"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvEducationCandidatetHS" />
+
+
+
+            <ImageView
+                android:id="@+id/btnAddExperience"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/plus_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/tvExperience"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvExperience" />
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvExperienceCandidatetHS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintHeight_max="200dp"
+                app:layout_constraintHeight_min="30dp"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvExperience" />
+
+            <TextView
+                android:id="@+id/tvSkills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Skills"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvExperienceCandidatetHS" />
+
+            <ImageView
+                android:id="@+id/btnAddSkills"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/plus_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSkills"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvSkills" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSkillsCandidatetHS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintHeight_max="150dp"
+                app:layout_constraintHeight_min="30dp"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSkills" />
+
+            <TextView
+                android:id="@+id/tv_noJobs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                android:text="No jobs to Show"
+                app:layout_constraintStart_toStartOf="@+id/rvJobsCandidatetHS"
+                app:layout_constraintTop_toBottomOf="@+id/tvJobs" />
+
+            <TextView
+                android:id="@+id/tv_noEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="No Education to Show"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/rvEducationCandidatetHS"
+                app:layout_constraintTop_toBottomOf="@+id/tvEducation" />
+
+            <TextView
+                android:id="@+id/tv_noExperience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="No Experience to Show"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvExperience" />
+
+            <TextView
+                android:id="@+id/tv_noSkills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="No Skills to Show"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSkills" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </ScrollView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_cameragallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottomsheetbg"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cv_takePhoto"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/btn_black_radius"
+                app:layout_constraintBottom_toTopOf="@+id/cv_gallery"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+
+                    android:id="@+id/tv_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_select_camera"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/white"
+                    android:gravity="center"
+                    android:text="Take photo"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cv_gallery"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/searchbg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv_takePhoto">
+
+                <TextView
+
+                    android:id="@+id/tv_gallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_select_from_gallery"
+                    android:drawablePadding="4dp"
+                    android:gravity="center"
+                    android:text="Choose from Gallery"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

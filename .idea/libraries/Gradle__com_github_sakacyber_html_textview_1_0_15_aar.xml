@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.sakacyber:html-textview:1.0.15@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a682ab0d43cc8eedbcaf6fac7cb5533a/transformed/jetified-html-textview-1.0.15/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a682ab0d43cc8eedbcaf6fac7cb5533a/transformed/jetified-html-textview-1.0.15/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a682ab0d43cc8eedbcaf6fac7cb5533a/transformed/jetified-html-textview-1.0.15/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.sakacyber/html-textview/1.0.15/4a5b515b69804b149d79e1a1709ee0228ec947af/html-textview-1.0.15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

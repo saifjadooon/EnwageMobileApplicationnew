@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/job_item"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:id="@+id/cb_job_item"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/candidateJobProfile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/candidateJobProfile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@+id/cb_job_item"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/upload_pic_bg" />
+
+        <TextView
+            android:id="@+id/tvJobName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="200dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Product Designer"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/candidateJobProfile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvJobType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="200dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="BIOS - Full Time"
+            android:textColor="@color/BLACK_SECONDARY"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/candidateJobProfile"
+            app:layout_constraintTop_toBottomOf="@+id/tvJobName" />
+
+        <TextView
+            android:id="@+id/tvJobLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:maxWidth="200dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Florida, US"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/TEXT_GRAY"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/candidateJobProfile"
+            app:layout_constraintTop_toBottomOf="@+id/tvJobType" />
+
+        <View
+            android:id="@+id/education_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#F0F1F3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvJobLocation" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cr_jobPill"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            android:paddingVertical="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvJobName"
+            app:layout_constraintStart_toEndOf="@+id/tvJobName"
+            app:layout_constraintTop_toTopOf="@+id/tvJobName">
+
+            <TextView
+                android:id="@+id/tvJobStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center"
+                android:padding="1dp"
+                android:text="In progress"
+                android:layout_marginHorizontal="5dp"
+                android:textColor="@color/green"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
